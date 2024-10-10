@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.galeria {
+    display: flex;
+    width: 100vw; /* Hacer la galería responsive al ancho de la ventana */
+    height: 100vh; /* Hacer la galería responsive a la altura de la ventana */
+    overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+.galeria img {
+    width: 0; /* Iniciar con las imágenes colapsadas */
+    flex-grow: 1;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: width 0.7s ease, filter 0.7s ease;
+}
+
+.galeria img:hover {
+    width: 400px; /* Expandir la imagen en hover para llenar la pantalla */
+    filter: brightness(130%);
+}
